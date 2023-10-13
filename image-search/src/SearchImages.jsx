@@ -35,7 +35,15 @@ const Second = () => {
   };
 
 
- 
+   //once the modal is clicked then it will display base on what is true 
+
+  const openModal = () => {
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
 
   return (
     <div>
