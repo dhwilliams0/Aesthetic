@@ -8,6 +8,9 @@ const Second = () => {
   const [images, setImages] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
 
+  //code for modal, using useState
+  const [isOpen, setIsOpen] = useState(false);
+
   const loadImages = (query, page = 1) => {
     let url = `https://api.unsplash.com/search/photos?query=${query}&page=${page}&per_page=${perPage}&client_id=${accessKey}`;
 
@@ -30,6 +33,9 @@ const Second = () => {
     e.preventDefault();
     loadImages(searchQuery);
   };
+
+
+ 
 
   return (
     <div>
@@ -67,6 +73,9 @@ const Second = () => {
               <div className="overlay">
                 <div>
                   <button className="save">Like</button>
+
+                  <button className="save">Like</button>
+
                   <div>
                     <button className="round-button">
                     {/* <img src="https://cdn-icons-png.flaticon.com/512/512/512142.png"/> */}
