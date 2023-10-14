@@ -14,7 +14,7 @@ function App() {
     {/* <Home/>
     <Second/> */}
     <Nav/>
-    <Home/> 
+    {/* <Home/>  */}
      {/* <Nav/>
     <main>
       <Routes>

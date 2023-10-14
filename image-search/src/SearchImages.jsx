@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './second.css'
+import './second.css';
+import './modal.css';
 
 const accessKey = 'i7Jn4SkydZNS5zzkFxSdoi1r7VovkEBA5TuOYj_gN2M';
 const perPage = 30;
@@ -7,8 +8,8 @@ const perPage = 30;
 const Second = () => {
   const [images, setImages] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
+  const [clickedImageUrl, setImageUrl] = useState('');
 
-  //code for modal, using useState
   const [isOpen, setIsOpen] = useState(false);
 
   const loadImages = (query, page = 1) => {
@@ -25,17 +26,13 @@ const Second = () => {
 
   useEffect(() => {
     loadImages('');
-    return () => {
-    };
+    return () => {};
   }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     loadImages(searchQuery);
   };
-
-
-   //once the modal is clicked then it will display base on what is true 
 
   const openModal = () => {
     setIsOpen(true);
@@ -45,59 +42,63 @@ const Second = () => {
     setIsOpen(false);
   };
 
+  const retrieveUrl = (clickedImageUrl) => {
+    setImageUrl(clickedImageUrl);
+  };
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Search.."
-          id ="search-input"
+          id="search-input"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
-        <button type="submit" className = "buttonBar">Search</button>
+        <button type="submit" className="buttonBar">
+          Search
+        </button>
       </form>
-        {/* <div className='row' >
-            <div className="image-gallery">
-                {images.map((imageUrl, index) => (
-             <div className ="im">
-                <h1>hrt</h1>
-                <img key={index} src={imageUrl} alt={`Image ${index + 1}`} />
-            </div>
-                ))}
-            </div>
-        </div> */}
-        {/* <div className = "image-container">
-            <div className="row" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
-                
-            </div>
-        </div> */}
 
-<div className="row" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
-      {images.map((image, index) => (
-        <div className="column" key={index} style={{ width: '30%', marginBottom: '20px' }}>
-          <div className="content-wrapper">
-            <div className="image-wrapper">
-              <div className="overlay">
-                <div>
-                  <button className="save">Like</button>
-
-                  <button className="save">Like</button>
-
+      <div className="row" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+        {images.map((image, index) => (
+          <div className="column" key={index} style={{ width: '30%', marginBottom: '20px' }}>
+            <div className="content-wrapper">
+              <div className="image-wrapper">
+                <div className="overlay">
                   <div>
-                    <button className="round-button">
-                    {/* <img src="https://cdn-icons-png.flaticon.com/512/512/512142.png"/> */}
-                      {/* <img src={image} alt="Like Icon" /> */}
+                    <button className="save" onClick={() => retrieveUrl(image)}>
+                      Like
                     </button>
+
+                    <button className="save" onClick={() => {retrieveUrl(image); openModal();}}>
+                      Open Modal
+                    </button>
+                    {isOpen && (
+                      <div className="modal">
+                        <div className="modal-content">
+                          <button className="close" onClick={closeModal}>
+                            Close
+                          </button>
+                          <h2>Image Preview</h2>
+                          <img src={clickedImageUrl} alt="Image" style={{ width: '100%' }} />
+                        </div>
+                      </div>
+                    )}
+
+                    <div>
+                      <button className="round-button"></button>
+                    </div>
                   </div>
                 </div>
+
+                <img src={image} alt="Image" style={{ width: '100%' }} />
               </div>
-              <img src={image} alt="Image" style={{ width: '100%' }} />
             </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
     </div>
   );
 };
