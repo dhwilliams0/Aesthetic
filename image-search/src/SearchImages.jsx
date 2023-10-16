@@ -78,11 +78,16 @@ const Second = () => {
                     {isOpen && (
                       <div className="modal">
                         <div className="modal-content">
+                          <div className='imageCommentContainer'>
                           <button className="close" onClick={closeModal}>
                             Close
                           </button>
-                          <h2>Image Preview</h2>
-                          <img src={clickedImageUrl} alt="Image" style={{ width: '100%' }} />
+                            <h2>Image Preview
+                              <div className='imgContainer'>
+                                <img src={clickedImageUrl} style={{ width: '100%' }} />
+                              </div>
+                            </h2>
+                        </div>
                         </div>
                       </div>
                     )}

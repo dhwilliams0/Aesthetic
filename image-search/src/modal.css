@@ -49,3 +49,8 @@ button {
 .close:hover {
   color: #333;
 }
+
+.imgContainer{
+  width:300px;
+  height:300px;
+}
