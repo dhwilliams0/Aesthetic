@@ -19,6 +19,21 @@
 //  const mysql = require("mysql");
 
  const db = require('./models');
+
+ const  {User} = require('./models');
+
+ app.get('/insert', (req,res) => {
+    User.create({
+        username: "huey",
+        email:"@mail",
+
+    }).catch((err) => {
+        if(err){
+            console.log(err);
+        }
+    })
+    res.send("insert")
+ })
 //  = mysql.createConnection({
 //   user: "postgres",
 //   host: "localhost",
