@@ -11,7 +11,6 @@ const Second = () => {
   const [clickedImageUrl, setImageUrl] = useState('');
 
   const [isOpen, setIsOpen] = useState(false);
-
   const loadImages = (query, page = 1) => {
     let url = `https://api.unsplash.com/search/photos?query=${query}&page=${page}&per_page=${perPage}&client_id=${accessKey}`;
 

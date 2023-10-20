@@ -24,7 +24,7 @@
 
  app.get('/insert', (req,res) => {
     User.create({
-        username: "huey",
+        username: "grandad",
         email:"@mail",
 
     }).catch((err) => {
@@ -42,7 +42,7 @@
 //  });
 
 
- db.sequelize.sync().then((req) => {
+db.sequelize.sync().then((req) => {
  app.listen(3001, () => {
   console.log("server running");
  });
