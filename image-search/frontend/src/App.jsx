@@ -27,10 +27,11 @@
 
 // export default App
 
-import React from 'react'; // Import React
-import { Routes, Route } from 'react-router-dom'; // Import React Router
-import SearchImages from './SearchImages'; // Import your components
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import SearchImages from './SearchImages'; 
 import Home from './Home';
+import Com from './CommentsContainer';
 import Nav from './Nav';
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
         {/* Define your routes */}
         <Route path="/" element={<Home />} />
         <Route path="/search" element={<SearchImages />} />
+        <Route path="/com" element={<Com />} />
         {/* Add more routes as needed */}
       </Routes>
     </>

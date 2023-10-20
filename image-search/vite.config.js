@@ -1,3 +1,11 @@
+import { defineConfig } from 'vite';
+export default defineConfig({
+  build: {
+    rollupOptions: {
+      input: "./frontend/src/main.jsx",
+    },
+  },
+}); 
 // // import { defineConfig } from 'vite'
 // import react from '@vitejs/plugin-react'
 
@@ -17,12 +25,3 @@
 //   },
 // });
 
-import { defineConfig } from 'vite';
-
-export default defineConfig({
-  build: {
-    rollupOptions: {
-      input: "./frontend/src/main.jsx", // Specify the path relative to vite.config.js
-    },
-  },
-});

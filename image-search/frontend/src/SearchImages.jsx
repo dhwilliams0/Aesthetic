@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './second.css';
 import './modal.css';
 
+
 const accessKey = 'i7Jn4SkydZNS5zzkFxSdoi1r7VovkEBA5TuOYj_gN2M';
 const perPage = 30;
 
@@ -81,6 +82,7 @@ const Second = () => {
                           <button className="close" onClick={closeModal}>
                             Close
                           </button>
+              
                             <h2>Image Preview
                               <div className='imgContainer'>
                                 <img src={clickedImageUrl} style={{ width: '100%' }} />
