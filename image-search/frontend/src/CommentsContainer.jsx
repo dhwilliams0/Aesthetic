@@ -192,13 +192,12 @@ const handleRepliesChange = (event) => {
   return (
     <div>
       <header>
-        <h1>Discussion Forum</h1>
       </header>
+  <div className = "head">Comments</div>
 
       <main>
         {/* Comment Section */}
 <div className="comment-section">
-  <h2>Comments</h2>
 
   <form className="comment-form" onSubmit={handleSubmit}>
     <textarea
@@ -256,9 +255,9 @@ const handleRepliesChange = (event) => {
 
       </main>
 
-      <footer>
-        &copy; 2023 Discussion Forum WE EXIST
-      </footer>
+      {/* <footer>
+        &copy; 
+      </footer> */}
     </div>
   );
 }

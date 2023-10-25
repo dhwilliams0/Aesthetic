@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './second.css';
 import './modal.css';
-
+import CommentContainer from "./CommentsContainer";
 
 const accessKey = 'i7Jn4SkydZNS5zzkFxSdoi1r7VovkEBA5TuOYj_gN2M';
 const perPage = 30;
@@ -78,11 +78,9 @@ const Second = () => {
                     {isOpen && (
                       <div className="modal">
                         <div className="modal-content">
+                                <img src="https://cdn-icons-png.flaticon.com/128/2938/2938884.png" alt="Close Icon"  className="close" onClick={closeModal} />                      
+                        <div className ="comments-container"><CommentContainer/></div>
                           <div className='imageCommentContainer'>
-                          <button className="close" onClick={closeModal}>
-                            Close
-                          </button>
-              
                             <h2>Image Preview
                               <div className='imgContainer'>
                                 <img src={clickedImageUrl} style={{ width: '100%' }} />
