@@ -124,6 +124,7 @@ figure, figcaption {
     transform: rotate(-1deg);
     backface-visibility: hidden;
     overflow: hidden; 
+    transform: rotate(10deg); 
 }
 
 .polaroid-frame:before {
