@@ -191,10 +191,7 @@ const handleRepliesChange = (event) => {
 
   return (
     <div>
-      <header>
-      </header>
-  <div className = "head">Comments</div>
-
+  {/* <div className = "head">Comments</div> */}
       <main>
         {/* Comment Section */}
 <div className="comment-section">

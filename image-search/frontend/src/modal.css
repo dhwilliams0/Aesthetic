@@ -29,12 +29,18 @@ button {
 
 /* Style for the modal content */
 .modal-content {
-  background-color: #0bf387;
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* width: 400px; */
   width: 400px;
+  height: 560px;
   text-align: center;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 /* Style for the close button */

@@ -31,6 +31,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import SearchImages from './SearchImages'; 
 import Home from './Home';
+import Test from './Test';
 import Com from './CommentsContainer';
 import Nav from './Nav';
 
@@ -40,6 +41,7 @@ function App() {
       <Nav /> {/* Include your navigation component at the top */}
       <Routes>
         {/* Define your routes */}
+        <Route path="/u" element={<Test />} />
         <Route path="/" element={<Home />} />
         <Route path="/search" element={<SearchImages />} />
         <Route path="/com" element={<Com />} />

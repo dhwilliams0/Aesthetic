@@ -6,7 +6,8 @@ const Home = () => {
       <h1>HOME</h1>
       
       <section className="hero">
-        <h1>Unleash your creativity with our diverse collection of visual inspiration. From fashion to food, travel to design - find your next inspiration on our platform. Join our community today and start exploring!</h1>
+        <h1></h1>
+        {/* Unleash your creativity with our diverse collection of visual inspiration. From fashion to food, travel to design - find your next inspiration on our platform. Join our community today and start exploring! */}
       </section>
       
       {/* Section 1 */}

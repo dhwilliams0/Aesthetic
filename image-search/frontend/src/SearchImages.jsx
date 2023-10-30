@@ -81,14 +81,23 @@ const Second = () => {
                                 <img src="https://cdn-icons-png.flaticon.com/128/2938/2938884.png" alt="Close Icon"  className="close" onClick={closeModal} />                      
                         <div className ="comments-container"><CommentContainer/></div>
                           <div className='imageCommentContainer'>
-                            <h2>Image Preview
                               <div className='imgContainer'>
-                                <img src={clickedImageUrl} style={{ width: '100%' }} />
+                                {/* <img src={clickedImageUrl} style={{ width: '100%' }} /> */}
+
+                                {/* <div id="polaroid"> */}
+  
+        <div class="polaroid-frame">
+            <figure>
+            <img src={clickedImageUrl} style={{ width: '100%' }} />
+                <figcaption></figcaption>
+            </figure>
+        </div>
+    </div>
+
                               </div>
-                            </h2>
                         </div>
                         </div>
-                      </div>
+                      // </div>
                     )}
 
                     <div>
@@ -97,6 +106,7 @@ const Second = () => {
                   </div>
                 </div>
 
+                   
                 <img src={image} alt="Image" style={{ width: '100%' }} />
               </div>
             </div>
