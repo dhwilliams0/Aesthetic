@@ -1,6 +1,13 @@
+  /* font styling  */
+  /* Import the font style  */
+  @font-face {
+    font-family: 'Aesthetic'; 
+    src: url('/Aesthetic.ttf') format('truetype'); 
+  }
+  
 body {
     font-size: 16px;
-    font-family: 'Work Sans', sans-serif;
+    /* font-family: 'Work Sans', sans-serif; */
     background-color: #E7D4D4;
 }
 
@@ -53,7 +60,7 @@ body {
   }
   h1 {
     color: #ffffff;
-    font-family: tahoma;
+    font-family: 'Aesthetic', sans-serif;
     font-size: 2rem;
     font-weight: 100;
     line-height: 1.5;
@@ -62,12 +69,13 @@ body {
     overflow: hidden;
     position: relative;
     width: 550px;
+    font-family: 'Aesthetic';
   }
   
-  h1 span {
+  /* h1 span {
     font-size: 40px;
     margin-left: 40px;
-  }
+  } */
   
   .message {
     background-color: rgb(243, 229, 234);
@@ -82,8 +90,9 @@ body {
     animation: openclose 5s ease-in-out infinite;
   }
   
+
   .word1, .word2, .word3 {
-    font-family: tahoma;
+    font-family: 'Aesthetic', sans-serif;;
   }
   
   @keyframes openclose {
