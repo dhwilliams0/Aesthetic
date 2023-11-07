@@ -34,7 +34,21 @@ function Model({ url }) {
 const Home = () => {
   return (
     <div className="ccon">
-        <h1>
+      {/* <h1>HOME</h1> */}
+{/* 
+        <h1 className="wordContainer">
+          <h1>Find Your</h1>
+          <div class="message">
+            <div class="word1">AESTHEIC</div>
+            <div class="word2">ESCENCE</div>
+            <div class="word3">BEAUTY</div>
+          </div>
+        </h1> */}
+      <section className="hero">
+        {/* <h1></h1> */}
+
+
+        <h1 className="wordContainer">
           <h1>Find Your</h1>
           <div class="message">
             <div class="word1">AESTHEIC</div>
@@ -42,10 +56,7 @@ const Home = () => {
             <div class="word3">BEAUTY</div>
           </div>
         </h1>
-      {/* <h1>HOME</h1> */}
 
-      <section className="hero">
-        {/* <h1></h1> */}
 
         {/* CAMER CONTAINER */}
         <div className="cameraContainer">
