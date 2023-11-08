@@ -34,34 +34,39 @@ function Model({ url }) {
 const Home = () => {
   return (
     <div className="ccon">
+      
       {/* <h1>HOME</h1> */}
 {/* 
         <h1 className="wordContainer">
-          <h1>Find Your</h1>
-          <div class="message">
-            <div class="word1">AESTHEIC</div>
-            <div class="word2">ESCENCE</div>
+        <h1>Find Your</h1>
+        <div class="message">
+        <div class="word1">AESTHEIC</div>
+        <div class="word2">ESCENCE</div>
             <div class="word3">BEAUTY</div>
           </div>
         </h1> */}
       <section className="hero">
         {/* <h1></h1> */}
+        <div className="word">
+        <h1 className = "find">Find</h1>
+        <h2 className = "your">YOUR</h2>
+        </div>
 
-
-        <h1 className="wordContainer">
-          <h1>Find Your</h1>
+        <h1 className="wordContainer"> 
+          {/* <h1 className = "find">Find Your</h1> */}
           <div class="message">
             <div class="word1">AESTHEIC</div>
             <div class="word2">ESCENCE</div>
             <div class="word3">BEAUTY</div>
-          </div>
+          </div> 
+          <div className="box"></div>
         </h1>
 
 
         {/* CAMER CONTAINER */}
         <div className="cameraContainer">
-          <Canvas
-            style={{ width: "800px", height: "800px", marginLeft: "323px" }}
+          <Canvas className="cameraSize"
+            style={{ width: "800px", height: "800px", marginLeft: "160px" }}
           >
             <ambientLight intensity={0.5} />
             <directionalLight intensity={1} position={[3, 2, 1]} />

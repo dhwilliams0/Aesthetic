@@ -51,13 +51,18 @@ body {
 
     /* display: flex;
     flex-direction: row;
-    justify-content: space-between; */
+    justify-content: space-between;
+    
+    
+    
+    
+    */
 
     display: flex; 
     flex-direction: row; 
     justify-content: flex-start;
 }
-
+ 
 
 /* /////CHANGE THE WORDS */
 * {
@@ -87,12 +92,29 @@ body {
 
   .wordContainer {
     margin-top: 241px;
+    margin-left: -722px;
   }
-  .cameraContainer {
+
+  .find{
+    font-size: 150px;
+    position: relative;
+    z-index: 4;
+  }
+
+  .your{
+    font-size: 150px; 
+    position: absolute;
+    top:213px;
+    opacity:94%;
+    left: 0;
+    z-index: 4;
+    color: #333
+  }
+  /* .cameraContainer {
     width: 20px;
     height: 20px;
     }
-  
+   */
   
   /* h1 span {
     font-size: 40px;
@@ -112,6 +134,14 @@ body {
     animation: openclose 7s ease-in-out infinite;
   }
   
+  .box {
+    width: 404px;
+    height: 304px;
+    background-color: #e7d4d4;
+    position: absolute;
+    bottom: 210px;
+    right: 2px;
+  }
 
   .word1, .word2, .word3 {
     font-family: 'Aesthetic', sans-serif;;
