@@ -52,7 +52,7 @@ const Home = () => {
         <h2 className = "your">YOUR</h2>
         </div>
 
-        <h1 className="wordContainer"> 
+        <div className="wordContainer"> 
           {/* <h1 className = "find">Find Your</h1> */}
           <div class="message">
             <div class="word1">AESTHEIC</div>
@@ -60,7 +60,7 @@ const Home = () => {
             <div class="word3">BEAUTY</div>
           </div> 
           <div className="box"></div>
-        </h1>
+        </div>
 
 
         {/* CAMER CONTAINER */}
@@ -72,7 +72,7 @@ const Home = () => {
             <directionalLight intensity={1} position={[3, 2, 1]} />
             <PerspectiveCamera
               makeDefault
-              position={[0, 0, 10]}
+              position={[0, 5, 6]}
               fov={75}
               zoom={1}
             />
@@ -83,7 +83,7 @@ const Home = () => {
               dampingFactor={0.1}
             />
             <Suspense fallback={null}>
-              <Model url="/camera.glb" />
+              <Model url="/camera.glb" scale={[801, 708, 720]}/>
             </Suspense>
           </Canvas>
         </div>
