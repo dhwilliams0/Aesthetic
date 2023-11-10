@@ -1,16 +1,16 @@
 import React from 'react'
 import h from './Home'
+import './nav.css'
 function Nav() {
   return (
-    <div>
-      <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="./search">Search Images</a></li>
-    <li><a href="./shares.html">My Shares</a></li>
-    <li><a href="./user.html">Profile</a></li>
-    <li><a href="./likes.html">Likes</a></li> 
-  </ul>
-    </div>
+    <nav>
+  
+    <a href="/">Home</a>
+    <a href="./search">Search Images</a>
+  <a href="./shares.html">My Shares</a>
+    <a href="./user.html">Profile</a>
+    <a href="./likes.html">Likes</a>
+    </nav>
   )
 }
 
