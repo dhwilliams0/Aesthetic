@@ -9,6 +9,7 @@ body {
     font-size: 16px;
     /* font-family: 'Work Sans', sans-serif; */
     background-color: #E7D4D4;
+    height: 900px;
 }
 
 /* .hero {
@@ -119,6 +120,7 @@ body {
     left: 0;
      z-index: 4;
     color: #333;
+    font-family: 'Aesthetic', sans-serif;;
   }
   /* .cameraContainer {
     width: 20px;
@@ -152,12 +154,21 @@ body {
   }
 
   .box {
-    width: 404px;
+    /* width: 404px;
     height: 304px;
     background-color: #e7d4d4;
     position: absolute;
     bottom: 210px;
-    right: 2px;
+    right: 2px; */
+    width: 404px;
+    height: 128px;
+    background-color: #e7d4d4;
+    position: absolute;
+    /* bottom: 210px; */
+    right: px;
+    left: 34px;
+    top: 625px;
+    /* bottom: px; */
   }
 
   .word1, .word2, .word3 {
@@ -182,3 +193,18 @@ body {
     }
   }
   
+  .imageContainer{
+    margin-top: -184px;
+  }
+  .statue{
+    width: 351px;
+    margin-top: 4%;
+    margin-left: 5%;
+  }
+  .frame{
+    width: 671px; 
+    position: absolute; 
+    top: 91%; 
+    left: 28%;
+    z-index: 2;
+  }
