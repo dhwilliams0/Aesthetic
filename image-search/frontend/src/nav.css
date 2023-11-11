@@ -4,4 +4,27 @@ nav {
     background-color: white;
     border-radius: 43px;
     position:fixed;
+    font-family: "Aesthetic";
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: center;
+    
 }
+
+ul {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    gap: 34px;
+}
+
+.home{
+    display: flex; 
+    margin-bottom: 7px;
+}
+/* display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
