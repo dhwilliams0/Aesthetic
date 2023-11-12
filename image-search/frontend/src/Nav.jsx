@@ -9,7 +9,7 @@ function Nav() {
   <ul>
     <a href="/" className='home'>Home</a>
     {/* <SearchBar/> */}
-    <a href="./search"> <SearchBar/></a>
+    <SearchBar/>
     <img src={User} className='icon'/>
   {/* <a href="./shares.html">My Shares</a>
     <a href="./user.html">Profile</a>

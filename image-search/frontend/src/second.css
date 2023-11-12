@@ -11,7 +11,7 @@
 }
 
 input[type="text"] {
-    width: 300px;
+    width: 405px;
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 20px;
@@ -90,14 +90,15 @@ input[type="text"] {
 /* photo frame */
 
 body {
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
     align-items: center;
     height: 100vh;
     margin: 0;
     background-color: #eee;
     padding: 30px;
     font: normal 16px Arial, sans-serif;
+    width: 100%;
 }
 
 
