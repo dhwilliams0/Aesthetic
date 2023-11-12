@@ -6,6 +6,7 @@ import SearchBar from "./SearchImages";
 function Nav() {
   return (
     <nav>
+  <div className='navContainer'>
   <ul>
     <a href="/" className='home'>Home</a>
     {/* <SearchBar/> */}
@@ -15,7 +16,8 @@ function Nav() {
     <a href="./user.html">Profile</a>
     <a href="./likes.html">Likes</a> */}
     </ul>
-    </nav>
+  </div>
+  </nav>
   )
 }
 
