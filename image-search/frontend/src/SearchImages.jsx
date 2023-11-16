@@ -1,15 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import './second.css';
-import './modal.css';
+import React, { useState, useEffect } from "react";
+import "./second.css";
+import "./modal.css";
+import "./test.css"
 import CommentContainer from "./CommentsContainer";
 
-const accessKey = 'i7Jn4SkydZNS5zzkFxSdoi1r7VovkEBA5TuOYj_gN2M';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Lenis from '@studio-freight/lenis';
+
+const accessKey = "i7Jn4SkydZNS5zzkFxSdoi1r7VovkEBA5TuOYj_gN2M";
 const perPage = 30;
 
 const Second = () => {
   const [images, setImages] = useState([]);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [clickedImageUrl, setImageUrl] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
+  const [clickedImageUrl, setImageUrl] = useState("");
 
   const [isOpen, setIsOpen] = useState(false);
   const loadImages = (query, page = 1) => {
@@ -25,7 +30,7 @@ const Second = () => {
   };
 
   useEffect(() => {
-    loadImages('');
+    loadImages("");
     return () => {};
   }, []);
 
@@ -46,6 +51,37 @@ const Second = () => {
     setImageUrl(clickedImageUrl);
   };
 
+
+
+
+  ////////////////USED GSAP AND LINES FOR SCROLLING/////////////////////////////////////////////////////////////////////////////////////
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    gsap.to('.img', {
+      stagger: 0.2,
+      y: -700,
+      scrollTrigger: {
+        trigger: '.img',
+        scrub: true,
+      },
+    });
+  }, []);
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -61,9 +97,23 @@ const Second = () => {
         </button>
       </form>
 
-      <div className="row" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+      <div
+        className="row"
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-between",
+        }}
+      >
         {images.map((image, index) => (
-          <div className="column" key={index} style={{ width: '30%', marginBottom: '20px' }}>
+          <div
+            className="column"
+            key={index}
+            style={{
+              width: "30%",
+              marginBottom: "20px",
+            }}
+          >
             <div className="content-wrapper">
               <div className="image-wrapper">
                 <div className="overlay">
@@ -72,31 +122,46 @@ const Second = () => {
                       Like
                     </button>
 
-                    <button className="save" onClick={() => {retrieveUrl(image); openModal();}}>
+                    <button
+                      className="save"
+                      onClick={() => {
+                        retrieveUrl(image);
+                        openModal();
+                      }}
+                    >
                       Open Modal
                     </button>
                     {isOpen && (
                       <div className="modal">
                         <div className="modal-content">
-                                <img src="https://cdn-icons-png.flaticon.com/128/2938/2938884.png" alt="Close Icon"  className="close" onClick={closeModal} />                      
-                        <div className ="comments-container"><CommentContainer/></div>
-                          <div className='imageCommentContainer'>
-                              <div className='imgContainer'>
-                                {/* <img src={clickedImageUrl} style={{ width: '100%' }} /> */}
+                          <img
+                            src="https://cdn-icons-png.flaticon.com/128/2938/2938884.png"
+                            alt="Close Icon"
+                            className="close"
+                            onClick={closeModal}
+                          />
+                          <div className="comments-container">
+                            <CommentContainer />
+                          </div>
+                          <div className="imageCommentContainer">
+                            <div className="imgContainer">
+                              {/* <img src={clickedImageUrl} style={{ width: '100%' }} /> */}
 
-                                {/* <div id="polaroid"> */}
-  
-        <div class="polaroid-frame">
-            <figure>
-            <img src={clickedImageUrl} style={{ width: '100%' }} />
-                <figcaption></figcaption>
-            </figure>
-        </div>
-    </div>
+                              {/* <div id="polaroid"> */}
 
+                              <div class="polaroid-frame">
+                                <figure>
+                                  <img
+                                    src={clickedImageUrl}
+                                    style={{ width: "100%" }}
+                                  />
+                                  <figcaption></figcaption>
+                                </figure>
                               </div>
+                            </div>
+                          </div>
                         </div>
-                        </div>
+                      </div>
                       // </div>
                     )}
 
@@ -106,12 +171,16 @@ const Second = () => {
                   </div>
                 </div>
 
-                   
-                <img src={image} alt="Image" style={{ width: '100%' }} />
+
+
+
+                      <section className="gallery">
+                <img src={image} alt="Image" style={{ width: "100%" }}  className="img"  />
+                </section>
               </div>
             </div>
           </div>
-        ))}
+        ))}{" "}
       </div>
     </div>
   );
