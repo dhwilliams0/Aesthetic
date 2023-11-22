@@ -313,7 +313,7 @@ p {
   display: inline-flex;
   text-shadow: 0 0 0 #f5f5f5;
   font-family: "Aesthetic";
-  animation: fade-in 1s, smoke 17s ease;
+  animation: fade-in 1s, smoke 11s ease;
   /* display:none; */
   /* animation-play-state: paused; */
 }
