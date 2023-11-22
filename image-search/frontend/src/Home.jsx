@@ -36,7 +36,8 @@ function Model({url}) { // the glftloader is used to load the model and the resu
         ref={modelRef}/>;
 }
 
-const Home = () => {
+const Home = ({props}) => {
+    console.log("props",props)
     return (
         <div className="ccon">
             {/* <h1>HOME</h1> */}
@@ -51,20 +52,20 @@ const Home = () => {
         </h1> */}
             <section className="hero">
                 {/* <h1></h1> */}
-                <div className="word">
+                {/* <div className="word">
                     <h1 className="find">Find</h1>
                     <h2 className="your">YOUR</h2>
                 </div>
 
                 <div className="wordContainer">
                     {/* <h1 className = "find">Find Your</h1> */}
-                    <div class="message">
+                    {/* <div class="message">
                         <div class="word1">AESTHEIC</div>
                         <div class="word2">ESCENCE</div>
                         <div class="word3">BEAUTY</div>
                     </div>
                     <div className="box"></div>
-                </div>
+                </div> */} 
 
                 {/* CAMER CONTAINER */}
                 <div className="cameraContainer">
@@ -87,7 +88,7 @@ const Home = () => {
                             }
                             fov={75}
                             zoom={1}/>
-                        <OrbitControls enableZoom={true}
+                        <OrbitControls enableZoom={false}
                             enablePan={true}
                             enableRotate={true}
                             dampingFactor={0.1}/>
@@ -95,7 +96,10 @@ const Home = () => {
                             <Model url="/camera.glb"
                                 scale={
                                     [801, 708, 720]
-                                }/>
+
+                                    
+                                }
+                                />
                         </Suspense>
                     </Canvas>
                 </div>
@@ -103,8 +107,18 @@ const Home = () => {
             <section>
                 <div className="imageContainer">
                     <img src={Statue} className="statue"/>
-                    <img src={PolaroidFrame} className="frame"/>
-                    <h1>sdfsdfd</h1>
+                    {/* <img src={PolaroidFrame} className="frame"/> */}
+                    {/* <h1 className="inspirationText">FIND YOUR INSPIRATION</h1> */}
+                </div>
+                <div className="side">
+                    <div className="sideContainer">
+                        <h2 className="fuel">Fuel your creativity</h2>
+                        <p>The purpose of this site is to search, save, and share images that speak to you. 
+                        </p>
+                        {/* <h2>well you can</h2>
+                        <p>Lorem eispum mimbum lal lalal lee momo you what non qwadesfdfdsf but unless 
+                        </p> */}
+                    </div>
                 </div>
             </section>
 
