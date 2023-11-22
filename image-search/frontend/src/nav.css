@@ -6,7 +6,7 @@ nav{
 }
 
 .navContainer {
-    width: 64%;
+    /* width: 64%;
     height: 72px;
     background-color: white;
     border-radius: 43px;
@@ -16,8 +16,18 @@ nav{
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-start;
+    justify-content: center; */
+
+    width: 64%;
+    height: 72px;
+    background-color: white;
+    border-radius: 43px;
+    position: fixed;
+    font-family: "Aesthetic";
+    display: flex;
+    align-items: center;
     justify-content: center;
-    
+    z-index: 1
 }
 
 ul {
@@ -35,3 +45,10 @@ ul {
     justify-content: space-between;
     align-items: center;
 } */
+
+
+
+
+
+
+
