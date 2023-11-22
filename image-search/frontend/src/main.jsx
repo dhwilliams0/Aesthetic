@@ -11,14 +11,17 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom'; // Import the appropriate router
+import { BrowserRouter as Router } from 'react-router-dom'; // 
+import SearchProvider from "./searchProvider"
 import './index.css'
 
 import App from './App'; // Import your main application component
 
 ReactDOM.render(
+  <SearchProvider>
   <Router>
     <App />
-  </Router>,
+  </Router>
+  </SearchProvider>,
   document.getElementById('root')
 );
