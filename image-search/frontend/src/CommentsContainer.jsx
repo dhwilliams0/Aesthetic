@@ -16,10 +16,10 @@ function CommentsForum() {
   //const { commentsData: comments }  = useContext(CommentsContext)
   //
   //COMMENTS TO TEST 
-//   const comments = [
-//     { id: 1, author: 'John Doe', text: 'This is the first comment' },
-//     { id: 2, author: 'Alice Smith', text: 'This is the second comment' },
-//   ]; 
+  const comments = [
+    { id: 1, author: 'John Doe', text: 'This is the first comment to test the length of the comments container' },
+    { id: 2, author: 'Alice Smith', text: 'This is the second comment' },
+  ]; 
   
  ////Reples fetch 
  const [replies, setReplies] = useState([]);
@@ -35,7 +35,7 @@ function CommentsForum() {
       .then((response) => response.json())
       .then((data) => {
         // Assuming the data is an array of comments
-        console.log("comments data",data)
+        // console.log("comments data",data)
         setComments(data);
        // setLoading(false); // Set loading to false after data is fetched
       })
@@ -45,8 +45,8 @@ function CommentsForum() {
       });
   }, [sortedComments]); 
 
-  const comments = sortedComments.slice().sort((a, b) => b.timestamp - a.timestamp);
-console.log("sortedComments",comments) 
+  // const comments = sortedComments.slice().sort((a, b) => b.timestamp - a.timestamp);
+// console.log("sortedComments",comments) 
 
 ////////////////////////////////////////////////////////////////GET REPLIES FROM BACKEND///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -192,47 +192,47 @@ const handleRepliesChange = (event) => {
   return (
     <div>
   {/* <div className = "head">Comments</div> */}
-      <main>
+  
         {/* Comment Section */}
 <div className="comment-section">
-
-  <form className="comment-form" onSubmit={handleSubmit}>
+{/* COMMENT FORM */}
+  {/* <form className="comment-form" onSubmit={handleSubmit}>
     <textarea
       placeholder="Add a comment"
       value={newComment}
       onChange={handleCommentChange}
     ></textarea>
     <button type="submit">Submit</button>
-  </form>
+  </form> */}
 
   {/* Individual Comments */}
   {comments.reverse().map((comment) => (
     <div className="comment" key={comment.id}>
       <div className="comment-header">
-        <span className="comment-author">{comment.username}</span>
-        <span className="comment-date">2 hours ago</span>
+        <span className="comment-author">{comment.autho}</span>
+        {/* <span className="comment-date"></span> */}
       </div>
-      <div className="comment-content">{comment.comment}</div>
-      <div className="comment-actions">
-        <button
+      <div className="comment-content">{comment.text}</div>
+      {/* <div className="comment-actions"> */}
+        {/* <button
           className="reply-button"
           onClick={() => toggleReplies(comment.id)}
         >
           {showReplies[comment.id] ? "Hide Replies" : "Show Replies"}
-        </button>
-      </div>
+      //   </button> */}
+      {/* // </div> */}
 
       {/* Replies */}
-      {showReplies[comment.id] && (
+      {/* {showReplies[comment.id] && (
         <div className="replies">
           {/* Reply Form */}
-            <form className="comment-form" onSubmit={(e) =>sendReplyBackend(event, comment.id)}>
+            {/* <form className="comment-form" onSubmit={(e) =>sendReplyBackend(event, comment.id)}>
                 <textarea
                 placeholder="Add a comment"
                 value={newReplies}
                 onChange={handleRepliesChange}
                 ></textarea>
-                <button type="submit">Submit</button>
+                <button type="submit"></button>
             </form>
           {replies
             .filter((reply) => reply.commentid === comment.id)
@@ -242,15 +242,15 @@ const handleRepliesChange = (event) => {
                 <span className="reply-text">{reply.text}</span>
               </div>
             ))}
-        </div>
-      )}
+        </div> */} 
+      {/* )} */}
     </div>
   ))}
 
   {/* More comments can be added here */}
 </div>
 
-      </main>
+  
 
       {/* <footer>
         &copy; 
