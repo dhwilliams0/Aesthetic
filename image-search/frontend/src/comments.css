@@ -37,7 +37,7 @@ header {
 
 .comment-form button {
     background-color: #333;
-    color: #fff;
+    color: #100e0e;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -45,14 +45,17 @@ header {
 }
 
 .comment {
-    display: flex;
-    flex-direction: row-reverse;
+    /* display: flex; */
+    flex-direction: column;
+    color:black;
 }
 
 .comment-section {
     display: flex;
     flex-direction: column-reverse;
     justify-content: flex-end;
+    margin: 1px;
+    padding:4%
 }
 
 .comment .comment-header {
@@ -72,6 +75,8 @@ header {
 
 .comment .comment-content {
     margin-bottom: 10px;
+    /* padding: 3%; */
+
 }
 
 .comment .comment-actions {

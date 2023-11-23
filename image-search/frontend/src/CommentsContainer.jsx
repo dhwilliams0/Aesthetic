@@ -17,7 +17,7 @@ function CommentsForum() {
   //
   //COMMENTS TO TEST 
   const comments = [
-    { id: 1, author: 'John Doe', text: 'This is the first comment to test the length of the comments container' },
+    { id: 1, author: 'John Doe is header', text: 'This is the first comment to test the length of the comments container but how far will the comment container go,lorem borem dorem This is the first comment to test the length of the comments container but how far will the comment container go,lorem borem dorem' },
     { id: 2, author: 'Alice Smith', text: 'This is the second comment' },
   ]; 
   
@@ -209,7 +209,7 @@ const handleRepliesChange = (event) => {
   {comments.reverse().map((comment) => (
     <div className="comment" key={comment.id}>
       <div className="comment-header">
-        <span className="comment-author">{comment.autho}</span>
+        <span className="comment-author">{comment.author}</span>
         {/* <span className="comment-date"></span> */}
       </div>
       <div className="comment-content">{comment.text}</div>
