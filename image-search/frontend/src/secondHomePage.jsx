@@ -143,37 +143,112 @@ useEffect(() => {
 //     };
 //   loadImages()
 // // // //  ////////////////////////////////// 
+// useEffect(() => {
+//   gsap.registerPlugin(ScrollTrigger);
+
+//   const { innerHeight } = window;
+//    // zoom-in
+//    gsap.to('#zoom-in .zoom', {
+//     scale: 700,
+//     stagger: 0.25,
+//     duration: 3,
+//     opacity:"100",
+//     scrollTrigger: {
+//       trigger: '#zoom-in',
+//       pin: true,
+//       end: `+=${innerHeight * 1.3}`,
+//       scrub: 1,
+//       onUpdate: (animation) => {
+//         console.log("end",animation)
+//         // console.log("end of",animation.start)
+//         // navigate('/');
+//         // if (animation.end) {
+//         // // console.log("end",animation.end)
+//         // //   navigate('/');
+//         //  }
+//         if (animation.progress === 1) {
+//           console.log("end")
+//           navigate('/');
+//         }
+//       },
+//     },
+//   });
+// }, [])
+
+
+
+// useEffect(() => {
+//   gsap.registerPlugin(ScrollTrigger);
+
+//   const { innerHeight } = window;
+//    // zoom-in
+//    gsap.to('#zoom-in .zoom', {
+//     scale: 700,
+//     stagger: 0.25,
+//     duration: 3,
+//     opacity:"100",
+//     scrollTrigger: {
+//       trigger: '#zoom-in',
+//       pin: true,
+//       end: `+=${innerHeight * 1.3}`,
+//       scrub: 1,
+//       onUpdate: (animation) => {
+//         console.log("progress", animation.progress)
+//         if (animation.progress > 0) {
+//           gsap.to('.extraBox', {
+//             scaleX: 1,
+//             ease: 'none',
+//           });
+//         } else {
+//           gsap.to('.extraBox', {
+//             scaleX: 0,
+//             ease: 'none',
+//           });
+//         }
+//       },
+//     },
+//   });
+// }, [])
+
 useEffect(() => {
   gsap.registerPlugin(ScrollTrigger);
 
   const { innerHeight } = window;
-   // zoom-in
-   gsap.to('#zoom-in .zoom', {
-    scale: 500,
+
+  gsap.to('#zoom-in .zoom', {
+    scale: 20,
     stagger: 0.25,
-    duration: 3,
-    opacity:"100",
+    duration: 0.4,
+    opacity: 1,
     scrollTrigger: {
       trigger: '#zoom-in',
       pin: true,
       end: `+=${innerHeight * 1.3}`,
-      scrub: 1,
+      scrub: 0.5,
       onUpdate: (animation) => {
-        console.log("end",animation)
-        // console.log("end of",animation.start)
-        // navigate('/');
-        // if (animation.end) {
-        // // console.log("end",animation.end)
-        // //   navigate('/');
-        //  }
-        if (animation.progress === 1) {
-          console.log("end")
-          navigate('/');
+        if (animation.progress > 0.2) {
+          gsap.to('.extraBox', {
+            scale: 200,
+            ease: 'none',
+            pin: true,
+            duration: 0.4,
+            scrub: 0,
+          });
+        } else {
+          gsap.to('.extraBox', {
+            scale: 0,
+            ease: 'none',
+            pin: true,
+            duration: 0.4,
+            scrub: 0,
+          });
         }
       },
     },
   });
-}, [])
+}, []);
+
+
 
   return (
     <>
@@ -243,9 +318,22 @@ useEffect(() => {
         {/* <h2>Text zoom-out</h2> */}
       </div>
 
+      {/* <div id="zoom-in">
+  <h1 className="zoom">Your Text</h1>
+  <div class="extraBox"></div>
+</div> */}
+
+{/* <div id="zoom-in">
+      <h1 className="zoom">See You There</h1>
+      <div className="extraBox">U</div>
+    </div> */}
+
+<div>
       <div id="zoom-in">
-        <h1 className ="zoom">see you there</h1>
+        <h1 className="zoom">See You There</h1>
+        <div className="extraBox">U</div>
       </div>
+    </div>
     </div>
     </>
   );
