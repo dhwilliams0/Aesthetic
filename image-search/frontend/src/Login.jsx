@@ -5,7 +5,7 @@ export default function Login() {
       <>
         <main className="login-main">
           <div className="container">
-            {/* <h1>Welcome to Not Pinterest</h1> */}
+            <h1 className="welcome">Welcome to Not Pinterest</h1>
             <form id="create-form" aria-describedby="log-in">
               <label htmlFor="email">ENTER USERNAME:</label>
               <input
