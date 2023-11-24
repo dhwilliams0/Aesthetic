@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./second.css";
 import "./modal.css";
 import "./test.css"
@@ -11,12 +11,18 @@ import Lenis from '@studio-freight/lenis';
 const accessKey = "i7Jn4SkydZNS5zzkFxSdoi1r7VovkEBA5TuOYj_gN2M";
 const perPage = 30;
 
-const Second = () => {
+import Nav from "./Nav"
+
+import searchContext from "./searchContext"
+const Second = ({}) => {
   const [images, setImages] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [clickedImageUrl, setImageUrl] = useState("");
 
   const [isOpen, setIsOpen] = useState(false);
+
+  
+  const {searchTerm} = useContext(searchContext)
   const loadImages = (query, page = 1) => {
     let url = `https://api.unsplash.com/search/photos?query=${query}&page=${page}&per_page=${perPage}&client_id=${accessKey}`;
 
@@ -34,6 +40,8 @@ const Second = () => {
     return () => {};
   }, []);
 
+  // console.log("search term from context",searchTerm)
+  loadImages(searchTerm);
   const handleSubmit = (e) => {
     e.preventDefault();
     loadImages(searchQuery);
@@ -54,37 +62,18 @@ const Second = () => {
 
 
 
-  ////////////////USED GSAP AND LINES FOR SCROLLING/////////////////////////////////////////////////////////////////////////////////////
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-
-    gsap.to('.img', {
-      stagger: 0.2,
-      y: -700,
-      scrollTrigger: {
-        trigger: '.img',
-        scrub: true,
-      },
-    });
-  }, []);
+  ////////////////USED GSAP AND LINES/////////////////////////////////////////////////////////////////////////////////////
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+
+    <div className="searchedImagesContainer">
+      {/* <Nav prop={}/> */}
+
+            
+      {/* <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Search.."
@@ -95,8 +84,7 @@ const Second = () => {
         <button type="submit" className="buttonBar">
           Search
         </button>
-      </form>
-
+      </form> */}
       <div
         className="row"
         style={{
@@ -133,13 +121,14 @@ const Second = () => {
                     </button>
                     {isOpen && (
                       <div className="modal">
-                        <div className="modal-content">
-                          <img
+                        <div className="modal-content" 
+                            onClick={closeModal}>X
+                          {/* <img
                             src="https://cdn-icons-png.flaticon.com/128/2938/2938884.png"
                             alt="Close Icon"
                             className="close"
                             onClick={closeModal}
-                          />
+                          /> */}
                           <div className="comments-container">
                             <CommentContainer />
                           </div>
@@ -171,12 +160,7 @@ const Second = () => {
                   </div>
                 </div>
 
-
-
-
-                      <section className="gallery">
-                <img src={image} alt="Image" style={{ width: "100%" }}  className="img"  />
-                </section>
+                <img src={image} alt="Image" style={{ width: "100%" }} />
               </div>
             </div>
           </div>
