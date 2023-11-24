@@ -25,7 +25,7 @@
     /* Additional styles as needed */
   }
   
-/* .container {
+.container {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
@@ -34,7 +34,7 @@
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin-top: 50px;
-} */
+}
 
 /* h1 {
     margin-top: 0;
@@ -47,7 +47,7 @@
     margin-top: 20px;
 } */
 
-/* label {
+label {
     display: block;
     font-size: 18px;
     font-weight: 700;
@@ -55,9 +55,22 @@
     margin-bottom: 8px;
 }
 
-input[type="text"],
-input[type="username"],
-input[type="password"] {
+.login-main input[type="text"],
+.login-main input[type="username"],
+.login-main input[type="password"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: rgb(181 189 204);
+}
+
+
+/* .password,.username,input {
     display: block;
     width: 100%;
     padding: 10px;
@@ -66,9 +79,11 @@ input[type="password"] {
     border-radius: 4px;
     margin-bottom: 20px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-} */
+} 
+ */
 
-/* button[type="submit"] {
+
+.submit-button {
     background-color: #e60023;
     color: #fff;
     padding: 10px 20px;
@@ -82,7 +97,7 @@ input[type="password"] {
 
 button[type="submit"]:hover {
     background-color: #c8001e;
-} */
+}
 
 .logo {
     display: block;

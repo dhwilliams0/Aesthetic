@@ -14,6 +14,7 @@ export default function Login() {
                 placeholder="Enter Username"
                 id="username"
                 autoComplete="username"
+                className="username"
               />
   
               <label htmlFor="password">Password:</label>
@@ -23,9 +24,10 @@ export default function Login() {
                 id="password"
                 name="password"
                 required
+                className="password"
               />
   
-              <button type="submit">Login</button>
+              <button type="submit" className="submit-button" >Login</button>
             </form>
             <p>
               Don't have an account? <a href="./create.html">Sign up</a>
