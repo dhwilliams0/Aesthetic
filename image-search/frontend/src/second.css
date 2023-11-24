@@ -36,10 +36,10 @@ input[type="text"] {
 }
 
 .overlay div {
-    display: flex;
     width: 100%;
-    justify-content: space-between;
-}
+    display: flex;
+    justify-content: space-between; 
+} 
 
 .overlay:hover {
     opacity: 1;
@@ -88,18 +88,18 @@ input[type="text"] {
 
 
 /* photo frame */
-
+/*  this was change for black look
 body {
     /* display: flex;
     justify-content: center; */
-    align-items: center;
+    /* align-items: center;
     height: 100vh;
     margin: 0;
     background-color: #eee;
     padding: 30px;
     font: normal 16px Arial, sans-serif;
     width: 100%;
-}
+} */ 
 
 
 figure, figcaption {
@@ -154,4 +154,14 @@ figcaption {
     max-width: 100%;
     width: 100%;
     height: auto;
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+.searchedImagesContainer {
+        margin-top: 9%;
 }
