@@ -7,6 +7,8 @@ import Home from  './Home';
 import "./animation.css"
 import { useNavigate } from 'react-router-dom';
 
+import Imgg from "./images/background.png"
+
 const SecondHomePage = () => {
   // const [images, setImages] = useState([]);
 
@@ -45,8 +47,6 @@ const SecondHomePage = () => {
   //   'https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2019/05/joseph-barrientos-49318-unsplash-e1558728034701.jpg?resize=1500%2C1000&ssl=1',
   //   'https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2019/05/joseph-barrientos-49318-unsplash-e1558728034701.jpg?resize=1500%2C1000&ssl=1', 
   // ];
-//   const accessKey = "i7Jn4SkydZNS5zzkFxSdoi1r7VovkEBA5TuOYj_gN2M";
-// const perPage = 25;
 
 //   let query = "anime"
 //   const loadImages = ( page = 1) => {
@@ -124,8 +124,7 @@ useEffect(() => {
 }, [window.scrollY]);
 
 ///////////////////////////////////
-// const accessKey = "i7Jn4SkydZNS5zzkFxSdoi1r7VovkEBA5TuOYj_gN2M";
-// const perPage = 25;
+
 
 //   let query = "anime"
 //   const loadImages = ( page = 1) => {
@@ -233,6 +232,10 @@ useEffect(() => {
             pin: true,
             duration: 0.4,
             scrub: 0,
+            onComplete: () => {
+              console.log('Animation completed, yeaaahh');
+              navigate('/login');
+            },            
           });
         } else {
           gsap.to('.extraBox', {
@@ -243,10 +246,53 @@ useEffect(() => {
             scrub: 0,
           });
         }
+        
       },
     },
   });
 }, []);
+
+// useEffect(() => {
+//   gsap.registerPlugin(ScrollTrigger);
+
+//   const { innerHeight } = window;
+
+//   gsap.to('#zoom-in .zoom', {
+//     scale: 20,
+//     stagger: 0.25,
+//     duration: 0.4,
+//     opacity: 1,
+//     scrollTrigger: {
+//       trigger: '#zoom-in',
+//       pin: true,
+//       end: `+=${innerHeight * 1.3}`,
+//       scrub: 0.5,
+//       onUpdate: (animation) => {
+//         if (animation.progress > 0.2) {
+//           gsap.to('.extraBox', {
+//             scale: 200,
+//             ease: 'none',
+//             pin: true,
+//             duration: 0.4,
+//             scrub: 0,
+//           });
+//         } else {
+//           gsap.to('.extraBox', {
+//             scale: 0,
+//             ease: 'none',
+//             pin: true,
+//             duration: 0.4,
+//             scrub: 0,
+//             onComplete: () => {
+//               navigate('/login');
+//             },
+//           });
+//         }
+//       },
+//     },
+//   });
+// }, [navigate]);
+
 
 
 
@@ -263,18 +309,7 @@ useEffect(() => {
     </div>
     <div className='behind'><Home props= {""}/></div>
       
-      {/* <section className="gallery">
-        {[...Array(images.length)].map((_, index) => (
-          <div key={index} className="line"></div>
-        ))}
-      </section>
-
-      <section className="gallery">
-        {images.map((url, index) => (
-          <div key={index} className="img" style={{ backgroundImage: `url(${url})` }}>
-          </div>
-        ))}
-      </section> */}
+     
 
 
 <section>
@@ -293,10 +328,6 @@ useEffect(() => {
   <div class="img"></div>
   <div class="img"></div>
   <div class="img"></div>
-  {/* {images.map((image, index) => {
-        console.log("img", image);
-        return <img className = "img"key={index} src={image} alt={`Image ${index}`} />;
-      })} */}
 </section>
 
 
@@ -331,7 +362,8 @@ useEffect(() => {
 <div>
       <div id="zoom-in">
         <h1 className="zoom">See You There</h1>
-        <div className="extraBox">U</div>
+        <img src={Imgg} className="extraBox"  />
+        {/* <div className="extraBox">U</div> */}
       </div>
     </div>
     </div>
