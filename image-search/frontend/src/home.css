@@ -2,7 +2,7 @@
   /* Import the font style  */
   @font-face {
     font-family: 'Aesthetic'; 
-    src: url('/Aesthetic.ttf') format('truetype'); 
+    src: url('./font-Style/Aesthetic.ttf') format('truetype'); 
   }
   
 body {
@@ -151,7 +151,13 @@ body {
   
   .cameraContainer{
     margin-left: 740px;
+    /* margin-top: 12%; */
+    margin-top: 17%;
+    margin-left: 35%;
   }
+
+
+
 
   .box {
     /* width: 404px;
@@ -197,8 +203,9 @@ body {
     margin-top: -184px;
   }
   .statue{
-    width: 351px;
-    margin-top: 4%;
+    width: 372px;
+    margin-top: -1%;
+    /* margin-left: 36%; */
     margin-left: 5%;
   }
   .frame{
@@ -207,4 +214,25 @@ body {
     top: 91%; 
     left: 28%;
     z-index: 2;
+    margin-top: 1.8%;
+  }
+
+  .inspirationText {
+    font-size: 100px; 
+    margin-top: -287px; 
+    position: absolute; 
+    z-index: 2; 
+    color: #ff9696;
+  }
+
+  /* width: 96%;
+    height: 72px;
+    background-color: white;
+    border-radius: 43px;
+} */
+
+
+  .icon {
+    width: 41px;
+    margin-top: 16px;
   }

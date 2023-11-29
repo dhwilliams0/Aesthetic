@@ -30,7 +30,7 @@ export default function Login() {
               <button type="submit" className="submit-button" >Login</button>
             </form>
             <p>
-              Don't have an account? <a href="./create.html">Sign up</a>
+              Don't have an account? <a href="/login">Sign up</a>
             </p>
           </div>
         </main>

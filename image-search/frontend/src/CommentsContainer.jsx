@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react';
 import './comments.css';
-
+import line from "./images/Pline.png"
 //import DiscussionContext from '../contexts/discussion-context';
 
+import { useNavigate } from 'react-router-dom';
 function CommentsForum() {
   const [newComment, setNewComment] = useState('');
   const [newReplies, setNewReplies] = useState('');
@@ -15,10 +16,12 @@ function CommentsForum() {
   //const {commentsData}
   //const { commentsData: comments }  = useContext(CommentsContext)
   //
+
+  const navigate = useNavigate();
   //COMMENTS TO TEST 
   const comments = [
-    { id: 1, author: 'John Doe is header', text: 'This is the first comment to test the length of the comments container but how far will the comment container go,lorem borem dorem This is the first comment to test the length of the comments container but how far will the comment container go,lorem borem dorem' },
-    { id: 2, author: 'Alice Smith', text: 'This is the second comment' },
+    { id: 1, author: 'User: John Doe ', text: 'This is the first comment to test the length of the comments container but how far will the comment container go,lorem borem dorem This is the first comment to test the length of the comments container but how far will the comment container go,lorem borem dorem' },
+    { id: 2, author: 'User: Alice Smith', text: 'This is the second comment' },
   ]; 
   
  ////Reples fetch 
@@ -189,6 +192,16 @@ const handleRepliesChange = (event) => {
       setNewReplies('');
     }
 
+
+    // const login = ()=> {
+    //   navigate("/login");
+    //   console.log("log")
+    // }
+
+    const login = () => {
+      console.log("log")
+      navigate("/login");
+    }
   return (
     <div>
   {/* <div className = "head">Comments</div> */}
@@ -208,11 +221,30 @@ const handleRepliesChange = (event) => {
   {/* Individual Comments */}
   {comments.reverse().map((comment) => (
     <div className="comment" key={comment.id}>
-      <div className="comment-header">
-        <span className="comment-author">{comment.author}</span>
+      {/* <div className="comment-header">
+        <span className="comment-author">{comment.author}
+        <img src={line} alt="Decorative Line" className="line-image" />
+        </span>
+        {/* <img src={line} alt="Decorative Line" className="line-image" /> */}
         {/* <span className="comment-date"></span> */}
-      </div>
+      {/* </div> */} 
+
+      <div className="comment-header">
+  <span className="comment-author">
+    {comment.author}
+  </span>
+    <img src={line} alt="Decorative Line" className="line-image" />
+</div>
+
       <div className="comment-content">{comment.text}</div>
+      <div className="comment-actions">
+        <button
+          className="reply-button"
+          onClick={() => login()}
+        >
+          {showReplies[comment.id] ? "Hide Replies" : "Show Replies"}
+        </button>
+      </div>
       {/* <div className="comment-actions"> */}
         {/* <button
           className="reply-button"

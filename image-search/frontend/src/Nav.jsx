@@ -45,13 +45,39 @@ function Nav({prop}) {
   } */}
 
 
-{location.pathname !== "/test" &&(
+{location.pathname === "/search" &&(
     <>
-    <a href="/" className='home'>Home</a>
+    <a href="/second" className='home'>Home</a>
     {/* <SearchBar search = {searchTerm}/>  */}
-    <a href="/" className='home'>Login</a>
-    <a href="/" className='home'>SignUp</a>
-    <a href="/" className='home'>{prop}</a>
+    <a href="/login" className='home'>Login</a>
+    <a href="/login" className='home'>SignUp</a>
+    {/* <a href="/" className='home'>{prop}</a> */}
+
+    <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Search For Images.."
+          id="search-input"
+          value={search}
+          onChange={handleChange}
+        />
+        <button type="submit" className="buttonBar">
+          Search
+        </button>
+      </form>
+    </>
+  )
+  }
+
+
+{location.pathname !== "/search" &&(
+    <>
+    <a href="/second" className='home'>Home</a>
+    <a href="/search" className='home'>Search Images</a>
+    {/* <SearchBar search = {searchTerm}/>  */}
+    <a href="/login" className='home'>Login</a>
+    <a href="/login" className='home'>SignUp</a>
+    {/* <a href="/" className='home'>{prop}</a> */}
     </>
   )
   }
@@ -70,7 +96,7 @@ function Nav({prop}) {
       </form> */}
 
 
-<form onSubmit={handleSubmit}>
+{/* <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Search.."
@@ -81,7 +107,7 @@ function Nav({prop}) {
         <button type="submit" className="buttonBar">
           Search
         </button>
-      </form>
+      </form> */}
 
 {/* {prop} */}
 {/* <SearchBar prop = {""}/> */}

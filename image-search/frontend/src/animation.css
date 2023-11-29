@@ -120,18 +120,30 @@ section {
         z-index: 1;
       } */
       
-      .extraBox {
+      /* .extraBox {
         position: fixed;
-        top: 50%;
-        left: 50%;
-        background-color: white;
+        /* top: 50%;
+        left: 50%; */
+        /* background-color: white; */
         /* opacity: 0.7; */
-         /* width: 10vw;
-        height: 10vh; */
+         /* width: 10px;
+        height: 10px; 
         z-index: 10;
         pointer-events: none;
         transform-origin: 50% 50%;
         transform: scale(0);
       } 
       
-       
+        */ 
+
+        .extraBox {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            z-index: 1;
+            pointer-events: none;
+            transform: scale(0);
+          }

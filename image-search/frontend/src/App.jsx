@@ -34,20 +34,25 @@ import Home from './Home';
 import Test from './Test';
 import Com from './CommentsContainer';
 import Nav from './Nav';
-
+import SecondHomePage from './secondHomePage';
+import Login from "./Login"
 function App() {
   return (
-    <>
-      <Nav /> {/* Include your navigation component at the top */}
-      <Routes>
-        {/* Define your routes */}
-        <Route path="/u" element={<Test />} />
-        <Route path="/" element={<Home />} />
-        <Route path="/search" element={<SearchImages />} />
-        <Route path="/com" element={<Com />} />
-        {/* Add more routes as needed */}
-      </Routes>
-    </>
+  <>
+    <Nav /> 
+    {/* Include your navigation component at the top */}
+    <Routes>
+      {/* Define your routes */}
+      <Route path="/test" element={<Test />} />
+      <Route path="/second" element={<SecondHomePage />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/search" element={<SearchImages />} />
+      <Route path="/com" element={<Com />} />
+      <Route path="/login" element={<Login/>} />
+      {/* Add more routes as needed */}
+    </Routes>
+  </>
+
   );
 }
 

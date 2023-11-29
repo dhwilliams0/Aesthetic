@@ -14,6 +14,8 @@ const perPage = 30;
 import Nav from "./Nav"
 
 import searchContext from "./searchContext"
+
+import { useNavigate } from 'react-router-dom';
 const Second = ({}) => {
   const [images, setImages] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
@@ -23,8 +25,10 @@ const Second = ({}) => {
 
   
   const {searchTerm} = useContext(searchContext)
+
+  const navigate = useNavigate();
   const loadImages = (query, page = 1) => {
-    let url = `https://api.unsplash.com/search/photos?query=${query}&page=${page}&per_page=${perPage}&client_id=${accessKey}`;
+    let url = `https://api.unsplash.com/search/photos?query=${query||"anime"}&page=${page}&per_page=${perPage}&client_id=${accessKey}`;
 
     fetch(url)
       .then((response) => response.json())
@@ -65,7 +69,9 @@ const Second = ({}) => {
   ////////////////USED GSAP AND LINES/////////////////////////////////////////////////////////////////////////////////////
 
 
-
+  const login = () => {
+    navigate("/login");
+  }
 
   return (
 
@@ -106,7 +112,7 @@ const Second = ({}) => {
               <div className="image-wrapper">
                 <div className="overlay">
                   <div>
-                    <button className="save" onClick={() => retrieveUrl(image)}>
+                    <button className="save" onClick={() => login()}>
                       Like
                     </button>
 
@@ -117,7 +123,7 @@ const Second = ({}) => {
                         openModal();
                       }}
                     >
-                      Open Modal
+                      Comments
                     </button>
                     {isOpen && (
                       <div className="modal">
@@ -154,9 +160,9 @@ const Second = ({}) => {
                       // </div>
                     )}
 
-                    <div>
+                    {/* <div>
                       <button className="round-button"></button>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
 
