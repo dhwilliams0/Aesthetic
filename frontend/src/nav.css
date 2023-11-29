@@ -1,0 +1,54 @@
+nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navContainer {
+    /* width: 64%;
+    height: 72px;
+    background-color: white;
+    border-radius: 43px;
+    position:fixed;
+    font-family: "Aesthetic";
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: center; */
+
+    width: 64%;
+    height: 72px;
+    background-color: white;
+    border-radius: 43px;
+    position: fixed;
+    font-family: "Aesthetic";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1
+}
+
+ul {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    gap: 34px;
+}
+
+.home{
+    display: flex; 
+    margin-bottom: 7px;
+}
+/* display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+
+
+
+
+
+
