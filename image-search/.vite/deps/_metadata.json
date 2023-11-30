@@ -1,0 +1,80 @@
+{
+  "hash": "98aae28e",
+  "browserHash": "62365573",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "c7824ad4",
+      "needsInterop": true
+    },
+    "react-dom": {
+      "src": "../../node_modules/react-dom/index.js",
+      "file": "react-dom.js",
+      "fileHash": "ae006841",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "1b1c1daf",
+      "needsInterop": false
+    },
+    "gsap": {
+      "src": "../../node_modules/gsap/index.js",
+      "file": "gsap.js",
+      "fileHash": "f4d3a267",
+      "needsInterop": false
+    },
+    "gsap/ScrollTrigger": {
+      "src": "../../node_modules/gsap/ScrollTrigger.js",
+      "file": "gsap_ScrollTrigger.js",
+      "fileHash": "d07f55d3",
+      "needsInterop": false
+    },
+    "@studio-freight/lenis": {
+      "src": "../../node_modules/@studio-freight/lenis/dist/lenis.modern.mjs",
+      "file": "@studio-freight_lenis.js",
+      "fileHash": "2f68ede9",
+      "needsInterop": false
+    },
+    "@react-three/fiber": {
+      "src": "../../node_modules/@react-three/fiber/dist/react-three-fiber.esm.js",
+      "file": "@react-three_fiber.js",
+      "fileHash": "213bd25b",
+      "needsInterop": false
+    },
+    "three/addons/loaders/GLTFLoader": {
+      "src": "../../node_modules/three/examples/jsm/loaders/GLTFLoader.js",
+      "file": "three_addons_loaders_GLTFLoader.js",
+      "fileHash": "351cbe0d",
+      "needsInterop": false
+    },
+    "@react-three/drei": {
+      "src": "../../node_modules/@react-three/drei/index.js",
+      "file": "@react-three_drei.js",
+      "fileHash": "9e6e0942",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "vision_bundle-7V7ENNVU": {
+      "file": "vision_bundle-7V7ENNVU.js"
+    },
+    "chunk-LW7Y5Z73": {
+      "file": "chunk-LW7Y5Z73.js"
+    },
+    "chunk-4IQGP2SS": {
+      "file": "chunk-4IQGP2SS.js"
+    },
+    "chunk-67XTWVEJ": {
+      "file": "chunk-67XTWVEJ.js"
+    },
+    "chunk-L7ZDRKWW": {
+      "file": "chunk-L7ZDRKWW.js"
+    },
+    "chunk-5WWUZCGV": {
+      "file": "chunk-5WWUZCGV.js"
+    }
+  }
+}
