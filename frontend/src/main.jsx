@@ -15,7 +15,7 @@ import { BrowserRouter as Router } from 'react-router-dom'; //
 import SearchProvider from "./searchProvider"
 import './index.css'
 
-import App from './App'; // Import your main application component
+import App from './App'; 
 
 ReactDOM.render(
   <SearchProvider>
