@@ -1,12 +1,12 @@
-import { defineConfig } from 'vite';
-export default defineConfig({
-  build: {
-    rollupOptions: {
-      input: "./frontend/src/main.jsx",
-    },
-  },
-}); 
-// // import { defineConfig } from 'vite'
+// import { defineConfig } from 'vite';
+// export default defineConfig({
+//   build: {
+//     rollupOptions: {
+//       input: "./frontend/src/main.jsx",
+//     },
+//   },
+// }); 
+// // // import { defineConfig } from 'vite'
 // import react from '@vitejs/plugin-react'
 
 // // // https://vitejs.dev/config/
@@ -20,8 +20,26 @@ export default defineConfig({
 // export default defineConfig({
 //   build: {
 //     rollupOptions: {
-//       input:  "./frontend/src/main.jsx", // Adjust the path to your entry file
+//       input:  "./frontend/src/main.jsx", 
 //     },
 //   },
 // });
 
+// export default {
+//   build: {
+//     chunkSizeWarningLimit: 1000, 
+//   },
+// };
+
+export default {
+  build: {
+    chunkSizeWarningLimit: 1000, // set your desired size limit in kilobytes
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+        },
+      },
+    },
+  },
+};
