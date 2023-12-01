@@ -45,7 +45,7 @@ function App() {
       {/* Define your routes */}
       <Route path="/test" element={<Test />} />
       <Route path="/second" element={<SecondHomePage />} />
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<SecondHomePage />} />
       <Route path="/search" element={<SearchImages />} />
       <Route path="/com" element={<Com />} />
       <Route path="/login" element={<Login/>} />
