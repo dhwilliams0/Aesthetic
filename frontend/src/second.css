@@ -10,13 +10,14 @@
     transition: all 0.2s ease-in-out;
 }
 
-input[type="text"] {
+.navContainer input[type="text"] {
     width: 405px;
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 20px;
     outline: none;
     margin-right: 10px;
+    background-color:#3b3b3b;
 }
 
 .overlay {

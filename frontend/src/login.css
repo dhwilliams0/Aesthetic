@@ -11,6 +11,8 @@
         font-family: "Aesthetic";
         background-image: url("https://static-prod.adweek.com/wp-content/uploads/2021/04/PinterestPinGridHero.jpg.webp");
 } */
+@media only screen and (min-width: 1280px) {
+
 .login-main {
     margin: 0;
     padding: 0;
@@ -18,7 +20,7 @@
     background-image: url("./images/background_img.webp");
     background-size: cover;
     background-position: center;
-    height: 114vh; 
+    height: 100%; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -109,4 +111,6 @@ button[type="submit"]:hover {
     display: block;
     margin: 20px auto;
     width: 200px;
+}
+
 }

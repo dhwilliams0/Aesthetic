@@ -113,7 +113,7 @@ const Home = ({props}) => {
                 <div className="side">
                     <div className="sideContainer">
                         <h2 className="fuel">Fuel your creativity</h2>
-                        <p>The purpose of this site is to search, save, and share images that speak to you. 
+                        <p className="purpose">The purpose of this site is to search, save, and share images that speak to you. 
                         </p>
                         {/* <h2>well you can</h2>
                         <p>Lorem eispum mimbum lal lalal lee momo you what non qwadesfdfdsf but unless 

@@ -1,3 +1,6 @@
+
+@media only screen and (min-width: 1280px) {
+
 html,body {
   width: 100%;
   overscroll-behavior: none;
@@ -227,14 +230,14 @@ p {
   display:flex;
 } */
 
-.boxContainer {
+.arrow-indicator-container {
   /* background-color: #000000; */
   position: absolute;
   top: 91%;
   left: 50%;
 }
 
-.boxContainer span {
+.arrow-indicator-container {
   display: block;
   width: 30px;
   height: 30px;
@@ -272,6 +275,10 @@ p {
 
 }
 
+/* .see-ya-there{
+  margin-top: 19%;
+} */
+
 
 
 /* .extraBox {
@@ -291,3 +298,11 @@ p {
   position: relative;
   height: 100vh; /*
 /* }  */
+
+.see-ya-there {
+   /* position: absolute; */
+  margin-top: 11%; /* Adjust this value to position it higher or lower */
+
+}
+
+}
