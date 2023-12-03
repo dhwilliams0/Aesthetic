@@ -11,20 +11,27 @@
         font-family: "Aesthetic";
         background-image: url("https://static-prod.adweek.com/wp-content/uploads/2021/04/PinterestPinGridHero.jpg.webp");
 } */
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 300px) {
+
+    /* html,body {
+        width: 100%;
+        overscroll-behavior: none;
+        height: 100% !important;
+      } */
 
 .login-main {
     margin: 0;
     padding: 0;
-    position: fixed;
     font-family: "Aesthetic";
     background-image: url("./images/background_img.webp");
     background-size: cover;
     background-position: center;
-    height: 114vh; 
+    height: 100%; 
     display: flex;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    width: 100%;
 
   }
   
@@ -40,9 +47,12 @@
     z-index: 1;
 }
 .welcome {
-    position:fixed;
+    font-size: 13rem;
+    position: absolute;
+    /* position:fixed; */
     z-index: -1;
-    margin-top:2%;
+    top: 50%;
+
 }
 
 /* h1 {
