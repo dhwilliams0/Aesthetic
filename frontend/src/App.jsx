@@ -36,6 +36,7 @@ import Com from './CommentsContainer';
 import Nav from './Nav';
 import SecondHomePage from './secondHomePage';
 import Login from "./Login"
+import SignUp from "./SignUp"
 function App() {
   return (
   <>
@@ -49,6 +50,7 @@ function App() {
       <Route path="/search" element={<SearchImages />} />
       <Route path="/com" element={<Com />} />
       <Route path="/login" element={<Login/>} />
+      <Route path="/Sign-Up" element={<SignUp/>} />
       {/* Add more routes as needed */}
     </Routes>
   </>

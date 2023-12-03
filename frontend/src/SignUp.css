@@ -19,7 +19,7 @@
         height: 100% !important;
       } */
 
-.login-main {
+.SignUp-main{
     margin: 0;
     padding: 0;
     font-family: "Aesthetic";
@@ -79,9 +79,9 @@ label {
     margin-bottom: 8px;
 }
 
-.login-main input[type="text"],
-.login-main input[type="username"],
-.login-main input[type="password"] {
+.SignUp-main input[type="text"],
+.SignUp-main input[type="username"],
+.SignUp-main input[type="password"] {
   display: block;
   width: 100%;
   padding: 10px;

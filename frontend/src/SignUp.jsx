@@ -1,12 +1,12 @@
 import React from "react"
-import "./login.css"
+import "./SignUp.css"
 export default function Login() {
     return (
       <>
-        <main className="login-main">
+        <main className="SignUp-main">
           <div className="container">
             <h1 className="welcome">Welcome to Not Pinterest</h1>
-            <form id="create-form" aria-describedby="log-in">
+            <form id="create-form" aria-describedby="SignUp">
               <label htmlFor="email">ENTER USERNAME:</label>
               <input
                 type="text"
@@ -27,10 +27,10 @@ export default function Login() {
                 className="password"
               />
   
-              <button type="submit" className="submit-button" >Login</button>
+              <button type="submit" className="submit-button" >Sign Up</button>
             </form>
             <p>
-             <a href="/Sign-Up">Sign up</a>
+             <a href="/login">Login</a>
             </p>
           </div>
         </main>
